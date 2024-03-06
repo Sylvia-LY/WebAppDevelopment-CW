@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="index.js"></script>
+    <title>Explore the Collections</title>
+</head>
+
+<body>
+    <h1>Explore the Collections</h1>
+
+    <!-- form -->
+    <div id="my_form">
+        <form>
+            <label for="my_search">Search by object, artist, maker...</label>
+            <span id="hint_search" class="hint"> - search term cannot be empty</span>
+            <input type="text" aria-label="Search by object, artist, maker..." id="my_search">
+
+            <input type="submit" value="Search" aria-label="Search">
+
+        </form>
+    </div>
+
+    <!-- loading -->
+    <div id="my_loading">
+        <!-- https://cssbud.com/gif/pendulum-loading-gif/ -->
+        <img src="loading.gif" alt="Loading">
+    </div>
+
+    <!-- error -->
+    <div id="my_error"></div>
+
+    <!-- records -->
+    <div id="my_records"></div>
+
+
+    <footer>
+        <p>Data Provided By The V&A Collections API</p>
+    </footer>
+</body>
+
+
+
+</html>
