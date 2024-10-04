@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow-wrap: break-word;
+    color: hsl(228, 12%, 48%);
+    text-align: center;
+    margin: 1.25rem;
+}
+
+h1, 
+#my_form, 
+footer {
+    margin: 2rem;
+}
+
+
+input {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hint {
+    display: none;
+    color: red;
+}
+
+#my_loading {
+    display: none;
+}
+
+#my_error {
+    color: red;
+}
+
+
+h1, 
+label {
+    color: hsl(212, 21%, 14%);
+}
+
+#my_records {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: whitesmoke;
+    box-shadow: hsl(228, 12%, 48%) 0px 3px 6px 0px;
+
+}
+
+
+.card_content {
+    display: grid;
+    text-align: left;
+    padding: 1.25rem;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+}
+
+
+.card_content_title {
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+}
+
+
+@media (min-width: 720px) {
+    #my_records {
+        grid-auto-rows: 200px auto;
+    }
+
+    .card {
+        display: grid;
+        grid-row: span 2;
+        /* css new feature - subgrid */
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid */
+        grid-template-rows: subgrid;
+    }
+
+    .card img {
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    /* trimming the title for pc users */
+    .card_content_title {
+        font-size: 0.9rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+}
